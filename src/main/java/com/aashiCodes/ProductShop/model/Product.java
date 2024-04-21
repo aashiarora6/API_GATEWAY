@@ -1,6 +1,7 @@
 package com.aashiCodes.ProductShop.model;
 
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.lang.annotation.Documented;
 import java.math.BigDecimal;
+import java.net.SocketOption;
 
 @Document(value = "product")
 @AllArgsConstructor
@@ -22,5 +24,4 @@ public class Product {
     private String name;
     private  String description;
     private BigDecimal price;
-
 }
